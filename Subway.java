@@ -2,7 +2,7 @@ package ttc;
 
 public class Subway {
 
-	//A single subway object. Should be controlled by a subway controller...
+	//A single subway object. Should be controlled by a subwayLine controller...
 	
 	//False = closed vice versa.
 	boolean doors_;
@@ -12,8 +12,8 @@ public class Subway {
 	private String currentStation_ = "Not Assigned";
 	private String line_ = "Not Assigned";
 	
-	public static void Move() {};
-	public static void Stop() {};
+	public static void Move() {}; //todo
+	public static void Stop() {}; //todo
 	
 	//=========Setters and Getters==========//
 	public void setCurrentStation(String Stat) {
@@ -45,10 +45,6 @@ public class Subway {
 
 	//===========================//
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 
 }
