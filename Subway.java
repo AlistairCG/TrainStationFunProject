@@ -6,7 +6,7 @@ public class Subway {
 	
 	//False = closed vice versa.
 	boolean doors_;
-	
+	private RailNode curlocation_;
 	private String destination_ = "Not Assigned";
 	private String origin_ = "Not Assigned";
 	private String currentStation_ = "Not Assigned";
@@ -41,6 +41,18 @@ public class Subway {
 	
 	public void setLine_(String line) {
 		line_ = line;
+	}
+	/**
+	 * @return the curlocation_
+	 */
+	public RailNode getCurlocation_() {
+		return curlocation_;
+	}
+	/**
+	 * @param curlocation_ the curlocation_ to set
+	 */
+	public void setCurlocation_(RailNode curlocation_) {
+		this.curlocation_ = curlocation_;
 	}
 
 	//===========================//
