@@ -34,7 +34,6 @@ public class Station {
 	public class Platform{
 		
 		private boolean isOccupied_;
-	//	private int passengerCount_; //May be removed
 		private int platId_;
 		
 		//ctor, platform IDs are local to the station
@@ -62,6 +61,18 @@ public class Station {
 	}
 	public int getPlatformAmt() {
 		return platformAmt_;
+	}
+	/**
+	 * @return the linesServed_
+	 */
+	public int [] getLinesServed_() {
+		return LinesServed_;
+	}
+	/**
+	 * @param linesServed_ the linesServed_ to set
+	 */
+	public void setLinesServed_(int [] linesServed_) {
+		LinesServed_ = linesServed_;
 	}
 	
 }
