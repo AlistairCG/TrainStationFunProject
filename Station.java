@@ -7,23 +7,24 @@ import ttc.Station.Platform;
 
 public class Station {
 
-	
+	//===Attributes===
 	private String platformTypes_ = "Not Assigned";
-	
-	ArrayList<Platform> Platforms_ = new ArrayList<Platform>();
+	private ArrayList<Platform> Platforms_ = new ArrayList<Platform>();
 	private int platformAmt_;
 	private int [] LinesServed_ = {0};
+	private StationNode stn_;
+	//=====//
 	
-	Station(String name, int platforms) throws Exception {
+	//ctor, create a station with the needed platforms and StationNode for traffic control
+	Station(String name, int platforms, StationNode stn) throws Exception {
 		if(platforms > 0) {
 			platformAmt_ = platforms;
+			setStn_(stn);
 			for(int i = 0; i < platforms; i++) {
 			//Add platforms to the arraylist
 				Platform in = new Platform(i + 1);
 				Platforms_.add(in);
-			
 			}
-			
 		}else {
 			throw new Exception("Invalid Station Constructor, missing argument platform");
 		}
@@ -55,6 +56,13 @@ public class Station {
 			this.isOccupied_ = isOccupied_;
 		}
 	}
+	public void printStation() {
+	
+		System.out.println("The Station name is: "+ stn_.getName_());
+		System.out.println("Platform count: " + Platforms_.size());
+		
+		
+	}
 	public void setPlatformAmt(int num) {
 		platformAmt_= num;
 		
@@ -73,6 +81,18 @@ public class Station {
 	 */
 	public void setLinesServed_(int [] linesServed_) {
 		LinesServed_ = linesServed_;
+	}
+	/**
+	 * @return the stn_
+	 */
+	public StationNode getStn_() {
+		return stn_;
+	}
+	/**
+	 * @param stn_ the stn_ to set
+	 */
+	public void setStn_(StationNode stn_) {
+		this.stn_ = stn_;
 	}
 	
 }

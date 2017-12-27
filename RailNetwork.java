@@ -71,17 +71,30 @@ public class RailNetwork {
 		int RailNodes = 3;
 		try {
 			RailNetwork TTC = new RailNetwork(RailNodes, "Test");	
-				RailNode src = new StationNode(0, "Source");
+				StationNode src = new StationNode(0, "Source");
 				RailNode Inter = new RailNode(1, "RailNode");
 				TTC.addNode(src, Inter);
-				RailNode dest = new StationNode(2, "Destination");
+				StationNode dest = new StationNode(2, "Destination");
 				TTC.addNode(Inter, dest);
+				
+				
+				Station Source = new Station("Source", 2, src);
+				Station Destination = new Station("Destination", 2, dest);
+				//Tester A: The Station is correctly initialised
+				System.out.println("Station tester: ");
+				Source.printStation();
+				Destination.printStation();
+				System.out.println("Finished Station Tester");
+				
 				printGraph(TTC);
 			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		System.out.println("Network and Node Test Complete!");
+		
+		
+		
 	}
 
 
