@@ -1,5 +1,7 @@
 package ttc;
 
+
+//Class is for rail node which is for the graph design to map a railnetwork.
 public class RailNode {
 
 	private int Id_;
@@ -41,7 +43,7 @@ public class RailNode {
 	 * @return the name_
 	 */
 	public String getName_() {
-		return Name_;
+		return Name_ + " Node";
 	}
 	/**
 	 * @param name_ the name_ to set

@@ -71,10 +71,10 @@ public class RailNetwork {
 		int RailNodes = 3;
 		try {
 			RailNetwork TTC = new RailNetwork(RailNodes, "Test");	
-				RailNode src = new RailNode(0, "Source");
-				RailNode Inter = new RailNode(1, "Node");
+				RailNode src = new StationNode(0, "Source");
+				RailNode Inter = new RailNode(1, "RailNode");
 				TTC.addNode(src, Inter);
-				RailNode dest = new RailNode(2, "Destination");
+				RailNode dest = new StationNode(2, "Destination");
 				TTC.addNode(Inter, dest);
 				printGraph(TTC);
 			
